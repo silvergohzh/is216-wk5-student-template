@@ -7,18 +7,24 @@ const id = ref('circle')
 
 function mOver() {
     // add code here
+    // alert("mOver!");
+    
+    id.value = "square";
+    // note CSS & JS has no direct acknowledgement inside the <style>, 
+    // you need to use quotations to the HTML element's id attribute
     
 }
 
 function mOut() {
     // add code here
-   
+    // alert("mOut!");
+    id.value = "circle";
 }
 </script>
 
 <template>
     <!-- modify code below -->
-    <div v-bind:id="id">
+    <div :id="id"@mouseover=mOver @mouseout=mOut>
         Mouse Over Me
     </div>
 
