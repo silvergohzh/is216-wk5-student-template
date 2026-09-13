@@ -34,7 +34,8 @@ function reset() {
         
         <!-- B. In-template expressions go here -->
         <p>Total points: {{ scoreA + scoreB}}</p>
-        <p>Points left to win: {{ maxScore - (scoreA > scoreB ? scoreA : scoreB) }}</p>
+        <!-- <p>Points left to win: {{ maxScore - (scoreA > scoreB ? scoreA : scoreB) }}</p> -->
+        <p>Points left to win: {{ maxScore - Math.max(scoreA, scoreB) }}</p>
 
         <!-- A. Event handlers go here -->
         <div style="display: flex; gap: 12px; margin: 12px 0;">
