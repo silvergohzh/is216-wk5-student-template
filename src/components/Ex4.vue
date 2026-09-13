@@ -32,9 +32,8 @@ function removeItem(idx) {
         </li>
     </ul>
 
-    <input type="text" v-model="newItem">
+    <input type="text" v-model="newItem" @keyup.enter="addItem">
     <button @click="addItem" >Add!</button>
    
-    
 </template>
 
