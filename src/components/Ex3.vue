@@ -11,15 +11,20 @@ const selectedOp = ref('+')
 // Note: DO NOT USE "eval()". In security, "eval" is considered "evil"!!!
 
 const result = computed(() => {
-    if (selectedOp.value == '+') lastResult.value = x.value + y.value
+    if (selectedOp.value == '+')
+        lastResult.value = x.value + y.value
 
-    if (selectedOp.value == '-') lastResult.value = x.value - y.value
+    if (selectedOp.value == '-')
+        lastResult.value = x.value - y.value
 
-    if (selectedOp.value == '*') lastResult.value = x.value * y.value
+    if (selectedOp.value == '*')
+        lastResult.value = x.value * y.value
 
-    if (selectedOp.value == '/') lastResult.value = x.value / y.value
+    if (selectedOp.value == '/')
+        lastResult.value = x.value / y.value
 
-    if (selectedOp.value == '%') lastResult.value = x.value % y.value
+    if (selectedOp.value == '%')
+        lastResult.value = x.value % y.value
 
     return lastResult;
 })
